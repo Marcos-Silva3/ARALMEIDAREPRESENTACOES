@@ -6,13 +6,11 @@
 
 <title>AR Almeida Representações</title>
 
-<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -107,13 +105,10 @@ nav a:hover{
     color:var(--dourado);
 }
 
-/* MENU MOBILE */
-
 .menu-mobile{
     display:none;
     font-size:28px;
     cursor:pointer;
-    color:white;
 }
 
 /* HERO */
@@ -168,6 +163,7 @@ nav a:hover{
 
     text-decoration:none;
     font-weight:700;
+
     border-radius:5px;
 
     transition:.3s;
@@ -189,6 +185,10 @@ section{
 .secao-branca{
     background:white;
     color:var(--texto);
+}
+
+.secao-azul{
+    background:var(--azul-medio);
 }
 
 .titulo{
@@ -221,13 +221,12 @@ section{
     padding:35px 25px;
     border-radius:10px;
     text-align:center;
-
-    transition:.3s;
+    transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
 .card i{
@@ -243,10 +242,6 @@ section{
 
 /* CATÁLOGOS */
 
-.secao-azul{
-    background:var(--azul-medio);
-}
-
 .grid-catalogos{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -257,6 +252,12 @@ section{
     background:var(--azul-escuro);
     border-radius:10px;
     overflow:hidden;
+    transition:.4s;
+}
+
+.catalogo:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
 .catalogo-img{
@@ -275,14 +276,9 @@ section{
     padding:25px;
 }
 
-.catalogo-conteudo h3{
-    margin-bottom:10px;
-}
-
 .catalogo-conteudo p{
-    margin-bottom:20px;
+    margin:15px 0 20px;
     color:rgba(255,255,255,0.7);
-    font-size:14px;
 }
 
 .btn-download{
@@ -308,32 +304,109 @@ section{
     color:var(--azul-escuro);
 }
 
-/* FORMULÁRIOS */
+/* CALENDÁRIO */
 
-.conversao{
+.calendario-container{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-
-    padding:80px 5%;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
 }
 
-.box{
+.calendario-box,
+.eventos-box{
     background:var(--azul-medio);
-
-    padding:35px;
-    border-radius:10px;
+    padding:30px;
+    border-radius:12px;
 }
 
-.box h2{
-    margin-bottom:15px;
+.calendario-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.calendario-header h3{
     color:var(--dourado);
 }
 
-.box p{
-    margin-bottom:25px;
-    color:rgba(255,255,255,0.7);
+.calendario-header button{
+    width:42px;
+    height:42px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--dourado);
+    color:var(--azul-escuro);
+
+    cursor:pointer;
+    transition:.3s;
 }
+
+.calendario-header button:hover{
+    transform:scale(1.08);
+}
+
+.dias-semana{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    margin-bottom:15px;
+    color:var(--dourado);
+    font-weight:700;
+}
+
+.dias{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+}
+
+.dia{
+    background:var(--azul-escuro);
+    border-radius:10px;
+    min-height:80px;
+    padding:10px;
+    transition:.3s;
+}
+
+.dia:hover{
+    transform:translateY(-3px);
+}
+
+.numero-vazio{
+    background:transparent;
+}
+
+.numero{
+    font-weight:700;
+}
+
+.evento{
+    margin-top:8px;
+    background:var(--dourado);
+    color:var(--azul-escuro);
+    padding:5px;
+    border-radius:5px;
+    font-size:11px;
+    font-weight:700;
+}
+
+.item-evento{
+    background:var(--azul-escuro);
+    padding:15px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.item-evento strong{
+    display:block;
+    color:var(--dourado);
+    margin-bottom:5px;
+}
+
+/* FORMULÁRIOS */
 
 .form-group{
     margin-bottom:18px;
@@ -366,23 +439,43 @@ section{
     gap:15px;
 }
 
+.conversao{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    padding:80px 5%;
+}
+
+.box{
+    background:var(--azul-medio);
+    padding:35px;
+    border-radius:10px;
+}
+
+.box h2{
+    color:var(--dourado);
+    margin-bottom:15px;
+}
+
+.box p{
+    margin-bottom:25px;
+    color:rgba(255,255,255,0.7);
+}
+
 .upload{
     border:2px dashed var(--dourado);
-
     padding:18px;
     border-radius:6px;
-
     text-align:center;
-    cursor:pointer;
-
     color:var(--dourado);
+    cursor:pointer;
 }
 
 .upload input{
     display:none;
 }
 
-/* RODAPÉ */
+/* FOOTER */
 
 footer{
     background:#050d1a;
@@ -394,7 +487,6 @@ footer{
     display:flex;
     justify-content:center;
     gap:15px;
-
     margin-bottom:20px;
 }
 
@@ -421,11 +513,6 @@ footer{
     color:var(--azul-escuro);
 }
 
-footer p{
-    color:rgba(255,255,255,0.5);
-    font-size:14px;
-}
-
 /* WHATSAPP */
 
 .whatsapp{
@@ -449,13 +536,10 @@ footer p{
     font-size:30px;
 
     text-decoration:none;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.25);
-
     z-index:999;
 }
 
-/* TABLET */
+/* RESPONSIVO */
 
 @media(max-width:992px){
 
@@ -467,19 +551,9 @@ footer p{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-conteudo h1{
-        font-size:42px;
-    }
-
 }
 
-/* CELULAR E TABLET */
-
 @media(max-width:768px){
-
-    header{
-        flex-direction:row;
-    }
 
     .menu-mobile{
         display:block;
@@ -487,10 +561,8 @@ footer p{
 
     nav{
         position:absolute;
-
         top:100%;
         left:0;
-
         width:100%;
 
         background:var(--azul-escuro);
@@ -503,24 +575,11 @@ footer p{
 
     nav.active{
         max-height:500px;
-        border-top:1px solid rgba(255,255,255,0.08);
     }
 
     nav ul{
         flex-direction:column;
         padding:20px;
-        gap:20px;
-    }
-
-    nav ul li{
-        width:100%;
-    }
-
-    nav ul li a{
-        display:block;
-        width:100%;
-        padding:10px 0;
-        font-size:15px;
     }
 
     .hero{
@@ -532,26 +591,12 @@ footer p{
         font-size:32px;
     }
 
-    .hero-conteudo p{
-        font-size:15px;
-    }
-
     .grid-servicos,
     .grid-catalogos,
-    .conversao{
-        grid-template-columns:1fr;
-    }
-
+    .calendario-container,
+    .conversao,
     .dupla{
         grid-template-columns:1fr;
-    }
-
-    .titulo{
-        font-size:26px;
-    }
-
-    .box{
-        padding:25px;
     }
 
 }
@@ -560,8 +605,6 @@ footer p{
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header>
 
@@ -578,13 +621,9 @@ Representações
 
 </div>
 
-<!-- MENU MOBILE -->
-
 <div class="menu-mobile" id="menu-mobile">
 <i class="fa-solid fa-bars"></i>
 </div>
-
-<!-- NAV -->
 
 <nav id="nav">
 
@@ -592,6 +631,7 @@ Representações
 <li><a href="#inicio">Início</a></li>
 <li><a href="#servicos">Serviços</a></li>
 <li><a href="#catalogos">Catálogos</a></li>
+<li><a href="#eventos">Eventos</a></li>
 <li><a href="#agendamento">Agendamento</a></li>
 <li><a href="#rastreio">Rastreio</a></li>
 </ul>
@@ -744,11 +784,138 @@ Baixar PDF
 
 </section>
 
+<!-- CALENDÁRIO -->
+
+<section class="secao-branca" id="eventos">
+
+<h2 class="titulo">
+Calendário de Eventos
+</h2>
+
+<div class="calendario-container">
+
+<!-- CALENDÁRIO -->
+
+<div class="calendario-box">
+
+<div class="calendario-header">
+
+<button id="prevMes">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<h3 id="mesAno"></h3>
+
+<button id="nextMes">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
+<div class="dias-semana">
+
+<div>Dom</div>
+<div>Seg</div>
+<div>Ter</div>
+<div>Qua</div>
+<div>Qui</div>
+<div>Sex</div>
+<div>Sáb</div>
+
+</div>
+
+<div class="dias" id="dias"></div>
+
+</div>
+
+<!-- EVENTOS -->
+
+<div class="eventos-box">
+
+<h3>
+Área Administrativa
+</h3>
+
+<div id="loginAdmin">
+
+<div class="form-group">
+
+<label>Senha do Administrador</label>
+
+<input
+type="password"
+id="senhaAdmin"
+class="form-control"
+placeholder="Digite a senha">
+
+</div>
+
+<button class="btn" id="btnLogin" style="width:100%; margin-bottom:25px;">
+Entrar
+</button>
+
+</div>
+
+<!-- FORMULÁRIO -->
+
+<div id="painelEventos" style="display:none;">
+
+<h3>
+Adicionar Evento
+</h3>
+
+<form id="formEvento">
+
+<div class="form-group">
+
+<label>Data do Evento</label>
+
+<input
+type="date"
+id="dataEvento"
+class="form-control"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Nome do Evento</label>
+
+<input
+type="text"
+id="nomeEvento"
+class="form-control"
+placeholder="Digite o evento"
+required>
+
+</div>
+
+<button class="btn" type="submit" style="width:100%; margin-bottom:25px;">
+Adicionar Evento
+</button>
+
+</form>
+
+</div>
+
+<h3>
+Próximos Eventos
+</h3>
+
+<div id="lista-eventos"></div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- FORMULÁRIOS -->
 
 <div class="conversao">
 
-<!-- RASTREAMENTO -->
+<!-- RASTREIO -->
 
 <div class="box" id="rastreio">
 
@@ -868,7 +1035,7 @@ Agendar Visita
 
 </div>
 
-<!-- RODAPÉ -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -898,7 +1065,7 @@ Agendar Visita
 
 </footer>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- WHATSAPP -->
 
 <a
 href="https://wa.me/5591982397142"
@@ -909,9 +1076,9 @@ target="_blank">
 
 </a>
 
-<!-- SCRIPT MENU MOBILE -->
-
 <script>
+
+/* MENU MOBILE */
 
 const menuMobile = document.getElementById('menu-mobile')
 const nav = document.getElementById('nav')
@@ -921,6 +1088,173 @@ menuMobile.addEventListener('click', ()=>{
     nav.classList.toggle('active')
 
 })
+
+/* LOGIN ADMIN */
+
+const senhaAdmin = document.getElementById('senhaAdmin')
+const btnLogin = document.getElementById('btnLogin')
+const painelEventos = document.getElementById('painelEventos')
+
+const senhaCorreta = "almeida2026"
+
+btnLogin.addEventListener('click', ()=>{
+
+    if(senhaAdmin.value === senhaCorreta){
+
+        painelEventos.style.display = 'block'
+
+        document.getElementById('loginAdmin').style.display = 'none'
+
+    }else{
+
+        alert('Senha incorreta!')
+
+    }
+
+})
+
+/* CALENDÁRIO */
+
+const mesAno = document.getElementById('mesAno')
+const diasContainer = document.getElementById('dias')
+const listaEventos = document.getElementById('lista-eventos')
+
+const prevMes = document.getElementById('prevMes')
+const nextMes = document.getElementById('nextMes')
+
+const formEvento = document.getElementById('formEvento')
+const dataEvento = document.getElementById('dataEvento')
+const nomeEvento = document.getElementById('nomeEvento')
+
+let dataAtual = new Date()
+
+let eventos = {
+
+    '2026-05-12':'Feira Comercial',
+    '2026-05-18':'Visita Técnica',
+    '2026-05-25':'Reunião Parceiros',
+    '2026-06-08':'Workshop Logística',
+    '2026-06-22':'Evento Corporativo'
+
+}
+
+/* RENDER CALENDÁRIO */
+
+function renderizarCalendario(){
+
+    const ano = dataAtual.getFullYear()
+    const mes = dataAtual.getMonth()
+
+    const primeiroDia = new Date(ano, mes, 1).getDay()
+    const ultimoDia = new Date(ano, mes + 1, 0).getDate()
+
+    const meses = [
+        'Janeiro','Fevereiro','Março','Abril',
+        'Maio','Junho','Julho','Agosto',
+        'Setembro','Outubro','Novembro','Dezembro'
+    ]
+
+    mesAno.innerText = `${meses[mes]} ${ano}`
+
+    diasContainer.innerHTML = ''
+
+    for(let i = 0; i < primeiroDia; i++){
+
+        diasContainer.innerHTML += `
+        <div class="dia numero-vazio"></div>
+        `
+
+    }
+
+    for(let dia = 1; dia <= ultimoDia; dia++){
+
+        const dataCompleta =
+        `${ano}-${String(mes+1).padStart(2,'0')}-${String(dia).padStart(2,'0')}`
+
+        let eventoHTML = ''
+
+        if(eventos[dataCompleta]){
+
+            eventoHTML =
+            `<div class="evento">${eventos[dataCompleta]}</div>`
+
+        }
+
+        diasContainer.innerHTML += `
+        <div class="dia">
+
+            <div class="numero">${dia}</div>
+
+            ${eventoHTML}
+
+        </div>
+        `
+    }
+
+    renderizarListaEventos()
+
+}
+
+/* LISTA EVENTOS */
+
+function renderizarListaEventos(){
+
+    listaEventos.innerHTML = ''
+
+    Object.keys(eventos).sort().forEach(data => {
+
+        listaEventos.innerHTML += `
+        <div class="item-evento">
+
+            <strong>${data}</strong>
+
+            <span>${eventos[data]}</span>
+
+        </div>
+        `
+
+    })
+
+}
+
+/* ADICIONAR EVENTO */
+
+formEvento.addEventListener('submit', (e)=>{
+
+    e.preventDefault()
+
+    const data = dataEvento.value
+    const nome = nomeEvento.value
+
+    eventos[data] = nome
+
+    renderizarCalendario()
+
+    formEvento.reset()
+
+})
+
+/* BOTÕES */
+
+prevMes.addEventListener('click', ()=>{
+
+    dataAtual.setMonth(dataAtual.getMonth() - 1)
+
+    renderizarCalendario()
+
+})
+
+nextMes.addEventListener('click', ()=>{
+
+    dataAtual.setMonth(dataAtual.getMonth() + 1)
+
+    renderizarCalendario()
+
+})
+
+/* INICIAR */
+
+renderizarCalendario()
 
 </script>
 
